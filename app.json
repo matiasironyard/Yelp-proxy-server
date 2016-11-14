@@ -1,0 +1,8 @@
+{
+  "name": "SampleProxy",
+  "description": "Sample Proxy",
+  "repository": "https://github.com/tiy-greenville-front-end-fall-2016/sample-proxy-server",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}

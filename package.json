@@ -1,0 +1,29 @@
+{
+ "name": "proxy",
+ "version": "0.0.1",
+ "description": "A sample Node.js app using Express 4",
+ "private": true,
+ "engines": {
+   "node": ">=0.10.0"
+ },
+ "repository": {
+   "type": "git",
+   "url": "https://github.com/tiy-greenville-front-end-fall-2016/sample-proxy-server"
+ },
+ "scripts": {
+   "start": "node index.js"
+ },
+
+"dependencies": {
+    "express": "^4.13.4",
+    "install": "^0.5.6",
+    "npm": "^3.8.0",
+    "request": "^2.69.0",
+    "cors": "^2.7.0",
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
+}
