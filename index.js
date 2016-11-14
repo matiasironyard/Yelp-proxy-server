@@ -10,11 +10,19 @@ app.get('/test', function(req, res){ // listens for request on /api route
  res.send('working!'); // if no errors, send the body of data back to front end
 });
 
+/* PUT YOUR CODE BETWEEN COMMENTS */
+
+
+
+/* PUT YOUR CODE ABOVE THIS COMMENT */
+
 var port = process.env.PORT || 3000;
 app.listen(port);
 console.log('Server running on port 3000');
 
+
 /* BreweryDB API Example */
+
 // app.get('/api', function(req, res){ // listens for request on /api route
 //   var lat = req.query.lat; // grabs lat and lng queries from the request object
 //   var lng = req.query.lng;
