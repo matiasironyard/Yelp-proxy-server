@@ -27,13 +27,13 @@ app.get('/api', function(req, res){ // listens for request on /api route
 //   token_secret: 'token-secret',
 // });
 
-// var phone = req.query.phone;
-// yelp.phoneSearch({ phone: phone })
-//   .then(console.log)
-//   .catch(console.error);
-//   res.send('we got a business');
-//     }
-//    });
+var phone = req.query.phone;
+yelp.phoneSearch({ phone: phone })
+  .then(console.log)
+  .catch(console.error);
+  res.send('we got a business');
+    }
+   });
 });
 
 
