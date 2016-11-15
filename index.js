@@ -2,6 +2,7 @@ var express = require('express');
 var request = require('request');
 var app = express();
 var cors = require('cors');
+var Yelp = require('yelp');
 
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
@@ -12,24 +13,28 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-app.get('/api', function(req, res){
-  var token = yelp.accessToken(clientId, clientSecret).then(response => {
-    console.log(response.jsonBody.access_token);
-  }).catch(e => {
-    console.log(e);
-  });
+/* PUT YOUR CODE BETWEEN COMMENTS */
 
-  var client = yelp.client(token);
-  var phone = req.query.phone;
+// app.get('/api', function(req, res){ // listens for request on /api route
+//  console.log('test api!');
+//  res.send('working api!);
 
-  client.phoneSearch({
-    phone: phone
-  }).then(response => {
-    console.log(response.jsonBody.businesses[0].name);
-  }).catch(e => {
-    console.log(e);
-  });
-  res.send(response);
+
+// var yelp = new Yelp({
+//   consumer_key: 'consumer-key',
+//   consumer_secret: 'consumer-secret',
+//   token: 'token',
+//   token_secret: 'token-secret',
+// });
+
+// var phone = req.query.phone;
+// yelp.phoneSearch({ phone: phone })
+//   .then(console.log)
+//   .catch(console.error);
+//   res.send('we got a business');
+//     }
+//    });
+// });
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
