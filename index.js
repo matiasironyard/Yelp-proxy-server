@@ -20,20 +20,19 @@ app.get('/api', function(req, res){ // listens for request on /api route
  res.send('working api!');
 
 
-// var yelp = new Yelp({
-//   consumer_key: 'consumer-key',
-//   consumer_secret: 'consumer-secret',
-//   token: 'token',
-//   token_secret: 'token-secret',
-// });
+var yelp = new Yelp({
+  consumer_key: 'consumer-key',
+  consumer_secret: 'consumer-secret',
+  token: 'token',
+  token_secret: 'token-secret',
+});
 
-var phone = req.query.phone;
-yelp.phoneSearch({ phone: phone })
-  .then(console.log)
-  .catch(console.error);
-  res.send('we got a business');
-    }
-   });
+yelp.search({ term: 'food', location: 'Montreal' })
+.then(function (data) {
+  console.log(data);
+})
+.catch(function (err) {
+  console.error(err);
 });
 
 
