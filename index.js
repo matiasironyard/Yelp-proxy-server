@@ -15,9 +15,9 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-app.get('/api', function(req, res){ // listens for request on /api route
- console.log('test api!');
- res.send('working api!');
+// app.get('/api', function(req, res){ // listens for request on /api route
+//  console.log('test api!');
+//  res.send('working api!');
 
 
 var yelp = new Yelp({
@@ -27,13 +27,9 @@ var yelp = new Yelp({
   token_secret: 'token-secret',
 });
 
-yelp.search({ term: 'food', location: 'Montreal' })
-.then(function (data) {
-  console.log(data);
-})
-.catch(function (err) {
-  console.error(err);
-});
+yelp.phoneSearch({ phone: '+15555555555' })
+  .then(console.log)
+  .catch(console.error);
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
