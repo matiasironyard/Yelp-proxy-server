@@ -13,24 +13,21 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-/* PUT YOUR CODE BETWEEN COMMENTS */
-
-// app.get('/api', function(req, res){ // listens for request on /api route
-//  console.log('test api!');
-//  res.send('working api!');
-
+app.get('/api', function(req, res){ // listens for request on /api route
+ console.log('test api!');
+ res.send('working api!');
 
 var yelp = new Yelp({
-  consumer_key: 'consumer-key',
-  consumer_secret: 'consumer-secret',
-  token: 'token',
-  token_secret: 'token-secret',
+  consumer_key: '-5M9jfXB_KlLZSry7N0y7g',
+  consumer_secret: '-CsnsEpO-AIvCUgJkzzMFxz4n7U',
+  token: 'XVoJD8K_7G7HFLBBEZswvl1u3idr7Ete',
+  token_secret: '3O88cZubxXw_0FqMW4zLsSqCZFU',
 });
-
-yelp.phoneSearch({ phone: '+15555555555' })
+ var phone = req.query.phone;
+yelp.phoneSearch({ phone: phone })
   .then(console.log)
   .catch(console.error);
-
+});
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
 
