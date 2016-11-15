@@ -15,9 +15,9 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-// app.get('/api', function(req, res){ // listens for request on /api route
-//  console.log('test api!');
-//  res.send('working api!);
+app.get('/api', function(req, res){ // listens for request on /api route
+ console.log('test api!');
+ res.send('working api!');
 
 
 // var yelp = new Yelp({
@@ -34,7 +34,7 @@ app.get('/test', function(req, res){ // listens for request on /api route
 //   res.send('we got a business');
 //     }
 //    });
-// });
+});
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
