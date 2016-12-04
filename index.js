@@ -62,7 +62,7 @@ var yelp = new YelpFusion({
 var business = req.query.business;
 
 yelp
-  .business({business: business})
+  .business(business)
   .then(function(data){
     res.send(data);
   }).catch(console.error);
