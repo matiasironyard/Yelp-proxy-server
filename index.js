@@ -51,6 +51,23 @@ yelp
   }).catch(console.error);
 });
 
+app.get('/business', function(req, res){ // listens for request on /api route
+ console.log('test api!');
+ // res.send('working api!');
+
+var yelp = new YelpFusion({
+  app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
+  app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV'
+});
+var business = req.query.business;
+
+yelp
+  .business({business: business})
+  .then(function(data){
+    res.send(data);
+  }).catch(console.error);
+});
+
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
 
