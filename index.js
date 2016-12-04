@@ -12,30 +12,30 @@ app.get('/test', function(req, res){ // listens for request on /api route
 });
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
-// 
-// app.get('/phone', function(req, res){ // listens for request on /api route
-//  console.log('test api!');
-//  // res.send('working api!');
-//
-// var yelp = new Yelp({
-//   consumer_key: '-5M9jfXB_KlLZSry7N0y7g',
-//   consumer_secret: '-CsnsEpO-AIvCUgJkzzMFxz4n7U',
-//   token: 'XVoJD8K_7G7HFLBBEZswvl1u3idr7Ete',
-//   token_secret: '3O88cZubxXw_0FqMW4zLsSqCZFU',
-// });
-//
-// var phone = req.query.phone;
-//
-// yelp
-//   .phoneSearch({phone: phone})
-//   .then(function(data){
-//     res.send(data);
-//   }).catch(console.error);
-// });
+
+app.get('/phone', function(req, res){ // listens for request on /api route
+ console.log('test api!');
+ // res.send('working api!');
+
+var yelp = new Yelp({
+  consumer_key: '-5M9jfXB_KlLZSry7N0y7g',
+  consumer_secret: '-CsnsEpO-AIvCUgJkzzMFxz4n7U',
+  token: 'XVoJD8K_7G7HFLBBEZswvl1u3idr7Ete',
+  token_secret: '3O88cZubxXw_0FqMW4zLsSqCZFU',
+});
+
+var phone = req.query.phone;
+
+yelp
+  .phoneSearch({phone: phone})
+  .then(function(data){
+    res.send(data);
+  }).catch(console.error);
+});
 
 /* PUT YOUR CODE BELOW THIS COMMENT */
 
-app.get('/phone', function(req, res){ // listens for request on /api route
+app.get('/fusion', function(req, res){ // listens for request on /api route
  console.log('test api!');
  // res.send('working api!');
 
