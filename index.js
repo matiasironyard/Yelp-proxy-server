@@ -38,7 +38,7 @@ app.get('/fusion', function(req, res){ // listens for request on /api route
  console.log('test api!');
  // res.send('working api!');
 
-var YelpFusion = new Yelp({
+var yelp = new YelpFusion({
   app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
   app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV'
 });
