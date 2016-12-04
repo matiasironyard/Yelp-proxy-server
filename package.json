@@ -1,26 +1,26 @@
 {
- "name": "proxy",
- "version": "0.0.1",
- "description": "A sample Node.js app using Express 4",
- "private": true,
- "engines": {
-   "node": ">=0.10.0"
- },
- "repository": {
-   "type": "git",
-   "url": "https://github.com/matiasironyard/Yelp-proxy-server"
- },
- "scripts": {
-   "start": "node index.js"
- },
-
-"dependencies": {
+  "name": "proxy",
+  "version": "0.0.1",
+  "description": "A sample Node.js app using Express 4",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matiasironyard/Yelp-proxy-server"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.7.0",
     "express": "^4.13.4",
     "install": "^0.5.6",
     "npm": "^3.8.0",
     "request": "^2.69.0",
-    "cors": "^2.7.0",
     "yelp": "^1.0.1",
+    "yelp-api-v3": "^1.5.0",
     "yelp-fusion": "^1.0.3"
   },
   "keywords": [
