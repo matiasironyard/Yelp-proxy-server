@@ -20,7 +20,8 @@
     "npm": "^3.8.0",
     "request": "^2.69.0",
     "cors": "^2.7.0",
-    "yelp": "^1.0.1"
+    "yelp": "^1.0.1",
+    "yelp-fusion": "^1.0.3"
   },
   "keywords": [
     "node",
