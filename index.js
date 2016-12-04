@@ -13,7 +13,7 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-app.get('/phone', function(req, res){ // listens for request on /api route
+app.get('/api', function(req, res){ // listens for request on /api route
  console.log('test api!');
  // res.send('working api!');
 
@@ -33,6 +33,7 @@ yelp
   }).catch(console.error);
 });
 
+/* PUT YOUR CODE ABOVE THIS COMMENT */
 
 var port = process.env.PORT || 3000;
 app.listen(port);
