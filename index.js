@@ -39,7 +39,7 @@ app.get('/fusion', function(req, res){ // listens for request on /api route
 
 var yelp = new Yelp({
   token_type: 'Bearer',
-  expires_in: 15551318,
+  expires_in: '15551318',
    access_token: 'i565rg5Yi8NoRyCmfTHX5ngjnlRSCmkQkG0CHSibDWzBY2OJQd3LNU0WfEsf9XibRZAiCBriAohxLkjbsZ4IfqMi-al9M4xp9DYM9vGZM6MlyNW45Z8earlIU94pWHYx'
 });
 var phone = req.query.phone;
