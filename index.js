@@ -51,9 +51,9 @@ yelp
   }).catch(console.error);
 });
 
-app.get('/business', function(req, res){ // listens for request on /api route
- console.log('test api!');
- // res.send('working api!');
+app.get('/businesses', function(req, res){ // listens for request on /api route
+ console.log('businesses api!');
+ res.send('working api!');
 
 var yelp = new YelpFusion({
   app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
