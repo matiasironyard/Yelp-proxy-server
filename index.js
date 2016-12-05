@@ -35,6 +35,26 @@ yelp
   }).catch(console.error);
 });
 
+app.get('/bizz', function(req, res){ // listens for request on /api route
+ console.log('test api!');
+ // res.send('working api!');
+
+var yelp = new Yelp({
+  consumer_key: '-5M9jfXB_KlLZSry7N0y7g',
+  consumer_secret: '-CsnsEpO-AIvCUgJkzzMFxz4n7U',
+  token: 'XVoJD8K_7G7HFLBBEZswvl1u3idr7Ete',
+  token_secret: '3O88cZubxXw_0FqMW4zLsSqCZFU',
+});
+
+var business = req.query.business;
+
+yelp
+  .business(business)
+  .then(function(data){
+    res.send(data);
+  }).catch(console.error);
+});
+
 app.get('/fusion', function(req, res){ // listens for request on /api route
  console.log('test api!');
  // res.send('working api!');
@@ -60,7 +80,7 @@ var yelp = new YelpBusiness({
   app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
   app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV',
 });
-var business = req.query.business;
+var businesse = req.query.business;
 
 yelp
   .business(business)
