@@ -62,13 +62,13 @@ var yelp = new YelpFusion({
   app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
   app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV',
 });
-var phone = req.query.phone;
-
-yelp
-  .phoneSearch({phone: phone})
-  .then(function(data){
-    res.send(data);
-  }).catch(console.error);
+// var phone = req.query.phone;
+//
+// yelp
+//   .phoneSearch({phone: phone})
+//   .then(function(data){
+//     res.send(data);
+//   }).catch(console.error);
 
   var businesse = req.query.business;
 
