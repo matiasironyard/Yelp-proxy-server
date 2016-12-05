@@ -4,7 +4,6 @@ var app = express();
 var cors = require('cors');
 var Yelp = require('yelp');
 var YelpFusion = require('yelp-api-v3');
-var YelpBusiness = require('yelp-api-v3');
 
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
@@ -76,7 +75,7 @@ app.get('/businesses', function(req, res){ // listens for request on /api route
  console.log('businesses api!');
  // res.send('working api!');
 
-var yelp = new YelpBusiness({
+var yelp = new YelpFusion({
   app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
   app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV',
 });
