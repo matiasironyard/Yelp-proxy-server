@@ -63,7 +63,7 @@ var yelp = new YelpBusiness({
 var business = req.query.business;
 
 yelp
-  .business('yuko-kitchen-los-angeles')
+  .business(business)
   .then(function(data){
     res.send(data);
   }).catch(console.error);
