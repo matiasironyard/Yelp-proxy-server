@@ -53,7 +53,7 @@ yelp
 });
 
 app.get('/businesses', function(req, res){ // listens for request on /api route
- // console.log('businesses api!');
+ console.log('businesses api!');
  // res.send('working api!');
 
 var yelp = new YelpBusiness({
@@ -63,7 +63,7 @@ var yelp = new YelpBusiness({
 var business = req.query.business;
 
 yelp
-  .business(business)
+  .business('yuko-kitchen-los-angeles')
   .then(function(data){
     res.send(data);
   }).catch(console.error);
