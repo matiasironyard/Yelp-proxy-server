@@ -40,7 +40,7 @@ app.get('/fusion', function(req, res){ // listens for request on /api route
 
 var yelp = new YelpFusion({
   app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
-  app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV'
+  app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV',
 });
 var phone = req.query.phone;
 
@@ -51,13 +51,13 @@ yelp
   }).catch(console.error);
 });
 
-app.get('/fusion', function(req, res){ // listens for request on /api route
+app.get('/business', function(req, res){ // listens for request on /api route
  console.log('test api!');
  // res.send('working api!');
 
 var yelp = new YelpFusion({
   app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
-  app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV'
+  app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV',
 });
 var business = req.query.business;
 
