@@ -69,6 +69,15 @@ yelp
   .then(function(data){
     res.send(data);
   }).catch(console.error);
+
+  var businesse = req.query.business;
+
+  yelp
+    .business(business)
+    .then(function(data){
+      res.send(data);
+    }).catch(console.error);
+  });
 });
 
 app.get('/businesses', function(req, res){ // listens for request on /api route
