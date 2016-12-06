@@ -71,22 +71,26 @@ yelp
   }).catch(console.error);
 });
 
-app.get('/businesses', function(req, res){ // listens for request on /api route
- console.log('businesses api!');
- // res.send('working api!');
+// app.get('/businesses', function(req, res){ // listens for request on /api route
+//  console.log('businesses api!');
+//  // res.send('working api!');
 
-var yelp = new YelpFusion({
-  app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
-  app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV',
-});
-var businesse = req.query.business;
-
-yelp
-  .business(business)
-  .then(function(data){
-    res.send(data);
-  }).catch(console.error);
-});
+// var yelp = new YelpFusion({
+//   app_id: 'nEJ5PjGwZaRC09YPXHv3mQ',
+//   app_secret: 'dEzauNet2CzQYE2UtuZXYzqxqMO6Jps6ENn9WaAjPFFcAgoxTWe3BZ4aZbeZPaCV',
+// });
+// var businesses = req.query.businesses;
+// console.log(businesses);
+//
+// yelp
+//   .business(businesses)
+//   .then(function(data){
+//     console.log('request done');
+//     res.send(data);
+//   }).catch(function(){
+//     console.log(arguments);
+//   });
+// });
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
