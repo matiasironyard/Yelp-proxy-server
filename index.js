@@ -85,11 +85,8 @@ console.log(business);
 yelp
   .business(business)
   .then(function(data){
-    console.log('request done');
     res.send(data);
-  }).catch(function(){
-    console.log(arguments);
-  });
+  }).catch(console.error);
 });
 
 
