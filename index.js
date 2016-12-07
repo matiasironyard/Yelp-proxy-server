@@ -72,7 +72,7 @@ yelp
 });
 
 app.get('/business', function(req, res){ // listens for request on /api route
- console.log('businesses api!');
+ console.log('business api!');
  // res.send('working api!');
 
 var yelp = new YelpFusion({
