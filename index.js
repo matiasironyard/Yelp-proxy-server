@@ -82,15 +82,13 @@ var yelp = new YelpFusion({
 var business= req.query.business;
 console.log(business);
 
-// yelp.business(business)
-//   .then(function(data){
-//     res.send(data);
-//   }).catch(console.error);
-// });
-
 yelp.business(business)
-.then(function (data) { console.log(data); })
-.catch(function (err) { console.error(err);});
+  .then(function(data){
+    res.send(data);
+  }).catch(console.error);
+});
+
+
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
