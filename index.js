@@ -12,6 +12,22 @@ app.get('/test', function(req, res){ // listens for request on /api route
  res.send('working!'); // if no errors, send the body of data back to front end
 });
 
+ app.get('/hubspot', function(req, res){ // listens for request on /api route
+var options = { method: 'GET',
+  url: 'https://api.hubapi.com/content/api/v2/blog-posts',
+  qs: 
+   { hapikey: '65b8decf-66bc-43bf-91db-3d862cccc152',
+     state: 'published' },
+  headers: 
+   {'cache-control': 'no-cache' } };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+});
+
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
 app.get('/api', function(req, res){ // listens for request on /api route
