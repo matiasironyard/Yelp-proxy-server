@@ -15,6 +15,15 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
+ app.get('/mlk', function(req, res){ // listens for request on /api route
+   request('https://api.hubapi.com/content/api/v2/blog-posts?hapikey=65b8decf-66bc-43bf-91db-3d862cccc152&state=published', function (error, response, body) { // api url
+     if (!error && response.statusCode === 200) {
+       console.log('yes');
+       res.send(body); // if no errors, send the body of data back to front end
+     }
+    });
+ });
+
 app.get('/api', function(req, res){ // listens for request on /api route
  console.log('test api!');
  // res.send('working api!');
