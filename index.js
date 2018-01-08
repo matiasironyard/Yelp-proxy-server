@@ -8,7 +8,7 @@ var Yelp= require('yelpv3');
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
 app.get('/test', function(req, res){ // listens for request on /api route
- console.log('working, yay!');
+ console.log('working, yay!!');
  res.send('working!'); // if no errors, send the body of data back to front end
 });
 
