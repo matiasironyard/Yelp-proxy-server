@@ -17,7 +17,8 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
  app.get('/mlk', function(req, res){ // listens for request on /api route
   var hapikey = process.evn.HAPI_KEY;
-   request('https://api.hubapi.com/content/api/v2/blog-posts?hapikey='+hapkey+'&state=published', function (error, response, body) { // api url
+  var requestUrl = 'https://api.hubapi.com/content/api/v2/blog-posts?hapikey='+hapikey+'&state=published'
+   request(requestUrl, function (error, response, body) { // api url
      if (!error && response.statusCode === 200) {
        console.log('yes');
        res.send(body); // if no errors, send the body of data back to front end
