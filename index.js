@@ -2,7 +2,6 @@ var express = require('express');
 var request = require('request');
 var app = express();
 var cors = require('cors');
-var Twitter = require('twitter');
 var Yelp= require('yelpv3');
 
 
@@ -17,7 +16,8 @@ app.get('/test', function(req, res){ // listens for request on /api route
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
  app.get('/mlk', function(req, res){ // listens for request on /api route
-   request('https://api.hubapi.com/content/api/v2/blog-posts?hapikey=65b8decf-66bc-43bf-91db-3d862cccc152&state=published', function (error, response, body) { // api url
+  var hapikey = process.evn.HAPI_KEY;
+   request('https://api.hubapi.com/content/api/v2/blog-posts?hapikey='+hapkey+'&state=published', function (error, response, body) { // api url
      if (!error && response.statusCode === 200) {
        console.log('yes');
        res.send(body); // if no errors, send the body of data back to front end
@@ -25,20 +25,8 @@ app.get('/test', function(req, res){ // listens for request on /api route
     });
  });
  app.get('/twt', function(req, res){ // listens for request on /api route
-   var client = new Twitter({
-  consumer_key: process.env.CONSUMER_KEYCONSUMER_KEY,
-  consumer_secret: process.env.CONSUMER_SECRET,
-  access_token_key: process.env.ACCESS_TOKEN_KEY,
-  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
-});
- 
-var params = {screen_name: 'millikenfloors'};
-client.get('statuses/user_timeline', params, function(error, tweets, response) {
-  if (!error) {
-    console.log(tweets);
+   
    res.send('twt working!'); // if no errors, send the body of data back to front end
-  }
-});
 
  });
 
