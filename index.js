@@ -16,8 +16,8 @@ app.get('/test', function(req, res){ // listens for request on /api route
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
  app.get('/mlk', function(req, res){ // listens for request on /api route
-  var hapikey = process.evn.HAPI_KEY;
-  var requestUrl = 'https://api.hubapi.com/content/api/v2/blog-posts?hapikey='+hapikey+'&state=published'
+  var hapikey = '65b8decf-66bc-43bf-91db-3d862cccc152';
+  var requestUrl = 'https://api.hubapi.com/content/api/v2/blog-posts?hapikey='+hapikey+'&state=published';
    request(requestUrl, function (error, response, body) { // api url
      if (!error && response.statusCode === 200) {
        console.log('yes');
