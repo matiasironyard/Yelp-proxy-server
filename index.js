@@ -30,14 +30,14 @@ app.get('/test', function(req, res){ // listens for request on /api route
 app.get('/twt', function(req, res){ // listens for request on /api route
  console.log('working, yay!!');
  var client = new Twitter({
-  consumer_key: process.env.consumer_key,
-  consumer_secret: process.env.consumer_secret,
-  access_token_key: process.env.access_token_key,
-  access_token_secret: process.env.access_token_secret,
+  consumer_key: process.env.CONSUMER_KEYCONSUMER_KEY,
+  consumer_secret: process.env.CONSUMER_SECRET,
+  access_token_key: process.env.ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 });
  
 var params = {screen_name: 'millikenfloors'};
-client.get('timeline/', params, function(error, tweets, response) {
+client.get('statuses/user_timeline', params, function(error, tweets, response) {
   if (!error) {
     console.log(tweets);
   }
