@@ -1,9 +1,12 @@
 var express = require('express');
 var request = require('request');
+var path = require('path');
 var app = express();
 var cors = require('cors');
 // var Yelp = require('yelp');
 var Yelp= require('yelpv3');
+var Twitter = require('twitter');
+
 
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
@@ -26,6 +29,19 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 app.get('/twt', function(req, res){ // listens for request on /api route
  console.log('working, yay!!');
+ var client = new Twitter({
+  consumer_key: process.env.consumer_key,
+  consumer_secret: process.env.consumer_secret,
+  access_token_key: process.env.access_token_key,
+  access_token_secret: process.env.access_token_secret,
+});
+ 
+var params = {screen_name: 'millikenfloors'};
+client.get('timeline/', params, function(error, tweets, response) {
+  if (!error) {
+    console.log(tweets);
+  }
+});
  res.send('twt working!'); // if no errors, send the body of data back to front end
 });
 
