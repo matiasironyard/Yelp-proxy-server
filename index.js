@@ -24,10 +24,8 @@ app.get('/test', function(req, res){ // listens for request on /api route
      }
     });
  });
-
-app.get('/twt', function(req, res){ // listens for request on /api route
- console.log('working, yay!!');
- var client = new Twitter({
+ app.get('/twt', function(req, res){ // listens for request on /api route
+   var client = new Twitter({
   consumer_key: process.env.CONSUMER_KEYCONSUMER_KEY,
   consumer_secret: process.env.CONSUMER_SECRET,
   access_token_key: process.env.ACCESS_TOKEN_KEY,
@@ -42,7 +40,9 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
   }
 });
 
-});
+ });
+
+
 
 
 app.get('/api', function(req, res){ // listens for request on /api route
