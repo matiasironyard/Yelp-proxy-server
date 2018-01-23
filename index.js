@@ -4,6 +4,7 @@ var app = express();
 var cors = require('cors');
 // var Yelp = require('yelp');
 var Yelp= require('yelpv3');
+var Twit = require ('twit')
 
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
@@ -23,6 +24,22 @@ app.get('/test', function(req, res){ // listens for request on /api route
      }
     });
  });
+
+app.get('/twt', function(req, res){
+ console.log('fetching twits')
+
+var T = new Twit({
+	consumer_key: 'lULYVihasxwYWuCyu8nMIroDc ',
+	consumer_secret: 'KnCIFFSD3KE8tEjNXARTamDwe9Ru3UctwBkjZn1MgwcjKTrCPy',
+	access_token: '249982628-EZJpHwuCFYiRlubzCXzieftcjEonR4XJ1nafnB30',
+	access_token_secret: 'tZ0vPV6bLVXhnRUnaR8hAgJDzgodN6Gh1p6dvC0VigQUn'
+})
+
+T.get('timeline', { screen_name: 'millikenfloors' }, function (err, data, response) {
+	console.log(data)
+ res.send(data)
+})
+});
 
 app.get('/api', function(req, res){ // listens for request on /api route
  console.log('test api!');
