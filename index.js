@@ -1,11 +1,9 @@
 var express = require('express');
 var request = require('request');
-var path = require('path');
 var app = express();
 var cors = require('cors');
-// var Yelp = require('yelp');
-var Yelp= require('yelpv3');
 var Twitter = require('twitter');
+var Yelp= require('yelpv3');
 
 
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
@@ -40,9 +38,10 @@ var params = {screen_name: 'millikenfloors'};
 client.get('statuses/user_timeline', params, function(error, tweets, response) {
   if (!error) {
     console.log(tweets);
+   res.send('twt working!'); // if no errors, send the body of data back to front end
   }
 });
- res.send('twt working!'); // if no errors, send the body of data back to front end
+
 });
 
 
