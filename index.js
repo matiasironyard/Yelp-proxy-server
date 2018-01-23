@@ -25,9 +25,9 @@ app.get('/test', function(req, res){ // listens for request on /api route
     });
  });
 
-app.get('/twt', function(req, res){
- console.log('fetching twits')
-
+app.get('/twt', function(req, res){ // listens for request on /api route
+ console.log('working, yay!!');
+ res.send('twt working!'); // if no errors, send the body of data back to front end
 });
 
 
