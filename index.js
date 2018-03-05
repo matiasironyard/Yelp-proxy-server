@@ -45,9 +45,20 @@ app.get("/pinestreetdentalsc", function(req, res) {
   fetchUrl(url, function(error, meta, body) {
     console.log(body.toString());
     var body = body.toString();
-    res.send(body);
+    res.json(body);
   });
 });
+
+app.get("/pinestreetdentalblog", function(req, res){
+  let url =
+    "https://www.googleapis.com/blogger/v3/blogs/3772562836218994725/posts?key=AIzaSyCrG8qqVK32XlsLPNqHyhp97Uhf1Q8nCrk";
+
+  fetchUrl(url, function(error, meta, body) {
+    console.log(body.toString());
+    var body = body.toString();
+    res.json(body);
+  });
+})
 
 app.get("/api", function(req, res) {
   // listens for request on /api route
