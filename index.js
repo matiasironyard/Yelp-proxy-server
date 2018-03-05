@@ -45,7 +45,7 @@ app.get("/pinestreetdentalsc", function(req, res) {
   fetchUrl(url, function(error, meta, body) {
     console.log(body.toString());
     var body = body.toString();
-    res.json(body);
+    res.send(body);
   });
 });
 
@@ -56,7 +56,7 @@ app.get("/pinestreetdentalblog", function(req, res){
   fetchUrl(url, function(error, meta, body) {
     console.log(body.toString());
     var body = body.toString();
-    res.json(body);
+    res.send(body);
   });
 })
 
